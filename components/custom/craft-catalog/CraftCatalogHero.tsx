@@ -29,10 +29,9 @@ export default function CraftCatalogHero() {
                 style={{ animationDelay: "0.2s" }}
               >
                 <p>
-                  From backed-up kitchen sinks to full main sewer line clogs, Pipe Monkeys
-                  handles every drain problem in Brooklyn, Queens, and Nassau County. We use
-                  pro-grade equipment, give you upfront pricing, and don&apos;t leave until
-                  the job is done right.
+                  From water heater failures to boiler violations, Hub Plumbing &amp; Mechanical
+                  handles every plumbing and heating challenge in Manhattan, Brooklyn, and Queens.
+                  Licensed NYC pros, upfront pricing, and Red Carpet Service — every job, every time.
                 </p>
               </div>
             </div>

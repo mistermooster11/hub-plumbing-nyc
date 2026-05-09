@@ -7,58 +7,58 @@ import { useInView } from "framer-motion";
 
 const posts = [
   {
-    id: "why-drains-keep-clogging",
-    title: "Why Your Drain Keeps Clogging (And What Actually Fixes It)",
+    id: "water-heater-repair-or-replace",
+    title: "Water Heater Repair vs. Replacement: How to Know Which One You Need",
     excerpt:
-      "Snaking the same drain every few months? The problem usually isn't the clog — it's grease or mineral buildup on the pipe walls. Here's when to snake and when to jet.",
-    category: "Drain Tips",
+      "Age, repair history, and the type of failure all factor in. A 12-year-old tank that's leaking at the base is a replacement — a faulty thermocouple on a 4-year-old unit is a repair. Here's how our techs make the call.",
+    category: "Water Heaters",
     date: "April 2026",
-    href: "/blog/why-drains-keep-clogging",
+    href: "/blog/water-heater-repair-or-replace",
   },
   {
-    id: "hydro-jetting-vs-snaking",
-    title: "Hydro Jetting vs. Drain Snaking: Which One Do You Actually Need?",
+    id: "nyc-plumbing-code-violations",
+    title: "Got a NYC Plumbing Code Violation? Here's Exactly What to Do",
     excerpt:
-      "Both tools clear clogs — but they work very differently. We break down the honest answer for homeowners who don't want to overpay or get upsold.",
-    category: "How It Works",
+      "Ignoring a violation notice compounds the problem fast. We walk through the process — assessment, correction, permit filing, and agency signoff — and explain why acting immediately saves money.",
+    category: "Code Violations",
     date: "March 2026",
-    href: "/blog/hydro-jetting-vs-snaking",
+    href: "/blog/nyc-plumbing-code-violations",
   },
   {
-    id: "main-line-warning-signs",
-    title: "5 Warning Signs Your Main Sewer Line Is About to Back Up",
+    id: "pre-war-building-plumbing",
+    title: "Pre-War Building Plumbing in NYC: What Owners and Managers Need to Know",
     excerpt:
-      "Multiple slow drains, gurgling toilets, foul smells near floor drains — these aren't random. They're your plumbing system telling you something's wrong downstream.",
+      "Cast iron, galvanized steel, and older trap configurations are standard in Manhattan and Brooklyn brownstones. We explain the common failure points and how to stay ahead of them.",
     category: "Homeowner Guide",
     date: "February 2026",
-    href: "/blog/main-line-warning-signs",
+    href: "/blog/pre-war-building-plumbing",
   },
   {
-    id: "brooklyn-old-pipes",
-    title: "Brooklyn's Old Pipes: What Every Brownstone Owner Needs to Know",
+    id: "tankless-water-heater-nyc",
+    title: "Tankless Water Heaters in NYC: Are They Worth It?",
     excerpt:
-      "Pre-war buildings in Brooklyn often have clay, cast iron, or even Orangeburg pipe. We explain what that means for your drains and how to stay ahead of blockages.",
-    category: "Local Guide",
+      "Space is at a premium in Manhattan apartments. Tankless heaters eliminate the tank footprint and can cut energy costs — but they're not right for every situation. An honest breakdown.",
+    category: "Water Heaters",
     date: "January 2026",
-    href: "/blog/brooklyn-old-pipes",
+    href: "/blog/tankless-water-heater-nyc",
   },
   {
-    id: "what-not-to-flush",
-    title: "What Not to Flush or Pour Down the Drain (The Real List)",
+    id: "boiler-violation-nyc",
+    title: "NYC Boiler Violations: What They Mean and How to Clear Them",
     excerpt:
-      "Flushable wipes aren't actually flushable. Grease hardens in your pipes. Here's what Pipe Monkeys techs pull out of clogged lines every single day.",
-    category: "Drain Tips",
+      "A boiler violation from the DOB or FDNY isn't something to sit on. We explain the most common violations in multi-family NYC buildings and what the compliance process looks like.",
+    category: "Heating & Boilers",
     date: "December 2025",
-    href: "/blog/what-not-to-flush",
+    href: "/blog/boiler-violation-nyc",
   },
   {
-    id: "camera-inspection-worth-it",
-    title: "Is a Drain Camera Inspection Worth It? Honest Answer from a Tech",
+    id: "hidden-leak-warning-signs",
+    title: "7 Signs You Have a Hidden Plumbing Leak (And What to Do About It)",
     excerpt:
-      "You don't need a camera for a simple kitchen clog. But for recurring main line issues? A camera can save you thousands. Here's when we recommend it and why.",
-    category: "How It Works",
+      "Higher water bills, unexplained damp spots, musty smells, and peeling paint are all symptoms. Catching a hidden leak early can prevent tens of thousands in water damage. Here's what to look for.",
+    category: "Leak Detection",
     date: "November 2025",
-    href: "/blog/camera-inspection-worth-it",
+    href: "/blog/hidden-leak-warning-signs",
   },
 ];
 
@@ -91,7 +91,7 @@ function PostCard({ post, delay }: { post: typeof posts[number]; delay: string }
           <span className="p3 ia-dark" style={{ fontSize: "1.2rem", opacity: 0.6 }}>{post.date}</span>
         </div>
         <h3 className="h6 ia-margin-1">
-          {/* [TODO: Enable when blog CMS is wired up] */}
+          {/* [TODO: Enable links when blog CMS is wired up] */}
           {post.title}
         </h3>
         <p className="p3 ia-regular ia-dark" style={{ marginBottom: "1.2rem" }}>
@@ -132,7 +132,7 @@ export default function BlogPage() {
               <span className="post post-page current-item">Blog</span>
             </div>
             <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              Drain Tips & Homeowner Guides
+              Plumbing Tips &amp; Homeowner Guides
             </h1>
           </div>
         </div>
@@ -140,12 +140,12 @@ export default function BlogPage() {
         <div className="hero-org__bottom flex-module">
           <div className="inner inner--slim-1172 cleared">
             <div className={`hero-org__left wow${heroVis}`}>
-              <div className={`sub-heading fadeInUpS wow${heroVis}`}>From the Pipe Monkeys Team</div>
+              <div className={`sub-heading fadeInUpS wow${heroVis}`}>From the Hub Plumbing Team</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Practical advice from the techs who clear drains in Brooklyn, Queens, and Nassau
-                  County every single day. No fluff — just the honest information homeowners
-                  and building managers actually need.
+                  Practical advice from licensed NYC plumbers who work in Manhattan, Brooklyn, and
+                  Queens every day. No fluff — just the honest information homeowners and building
+                  managers actually need.
                 </p>
               </div>
             </div>
@@ -168,9 +168,9 @@ export default function BlogPage() {
                   </a>
                 </li>
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.3s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:9176348888">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (917) 634-8888</span>
                   </a>
                 </li>
               </ul>
@@ -191,7 +191,7 @@ export default function BlogPage() {
           >
             Latest Articles
           </h2>
-          {/* [TODO: Replace placeholder posts with real content from client or CMS] */}
+          {/* [TODO: Replace placeholder posts with real content from Hub Plumbing or connected CMS] */}
           <div className="user-grid-list user-grid-list--small">
             {posts.map((post, i) => (
               <PostCard key={post.id} post={post} delay={`${(i % 3) * 0.1}s`} />
@@ -207,7 +207,7 @@ export default function BlogPage() {
       >
         <div className="inner inner--slim-1172">
           <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Have a Drain Emergency?
+            Have a Plumbing Emergency?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             Don&apos;t Wait — We Pick Up Fast
@@ -215,14 +215,14 @@ export default function BlogPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Call <strong>(718) 749-1830</strong> and we&apos;ll give you an ETA on the spot.
-                Same-day service available seven days a week across Brooklyn, Queens, and Nassau County.
+                Call <strong>(917) 634-8888</strong> and we&apos;ll give you an ETA on the spot.
+                Same-day service available seven days a week across Manhattan, Brooklyn, and Queens.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:9176348888">
+                  Call (917) 634-8888
                 </a>
               </div>
             </div>

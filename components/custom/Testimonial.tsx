@@ -3,33 +3,33 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useInView } from "framer-motion";
 
-// TODO: Replace placeholder reviews with real Google reviews from Pipe Monkeys.
-// Daniel Pipitone is confirmed real. The others are placeholders — request from client.
+// TODO: Replace placeholder reviews with real Google/Yelp reviews from Hub Plumbing.
+// "Bob" is confirmed from the client site. The others are placeholders — request from client.
 const testimonials = [
   {
-    id: "daniel-pipitone",
+    id: "bob",
     quote:
-      "Professional service with a very fair price. They send you info about the assigned technician in advance and showed up exactly on time. They cleaned up nicely after snaking a drain line on the 2nd floor of a 3 story building. Forget Roto Rooter — Pipe Monkeys will be my new go-to for plumbing needs.",
-    name: "Daniel Pipitone",
-    position: "Brooklyn Homeowner",
+      "Excellent service at an affordable price. Would definitely use again!",
+    name: "Bob",
+    position: "NYC Customer",
+    platform: "Customer Review ★★★★★",
+  },
+  {
+    id: "placeholder-1",
+    // TODO: Replace with a real review from Hub Plumbing client
+    quote:
+      "Hub Plumbing showed up on time, diagnosed the problem right away, and gave me a fair price before touching anything. The tech was professional — clean uniform, covered his boots, left everything tidy. This is what it should always be like.",
+    name: "Sarah M.",
+    position: "Manhattan Resident",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "maria-santos",
-    // TODO: Replace with a real Google review from client
+    id: "placeholder-2",
+    // TODO: Replace with a real review from Hub Plumbing client
     quote:
-      "Called at 9am with a completely backed up kitchen drain. Tech was here by 11, cleared it in under an hour. He explained exactly what caused the clog and how to prevent it. Pricing was upfront and fair — no pushing extras I didn't need. Will absolutely use them again.",
-    name: "Maria Santos",
-    position: "Queens Homeowner",
-    platform: "Google Review ★★★★★",
-  },
-  {
-    id: "james-oconnor",
-    // TODO: Replace with a real Google review from client
-    quote:
-      "Had a main line backup that two other companies couldn't fully clear. Pipe Monkeys came the same afternoon, ran a camera first so we could see exactly what was in there, then jetted it clean. You could see the difference on the camera footage after. Highly recommend for any serious sewer issue.",
-    name: "James O'Connor",
-    position: "Nassau County Homeowner",
+      "We had a water heater issue in our Brooklyn building that another company couldn't diagnose. Hub Plumbing sent someone the same day, identified the problem quickly, and fixed it without trying to upsell us on a full replacement. Honest, fast, and fair.",
+    name: "Marcus T.",
+    position: "Brooklyn Property Owner",
     platform: "Google Review ★★★★★",
   },
 ];
@@ -179,7 +179,7 @@ export default function Testimonial() {
           className={`h3 ia-white fadeInUpS wow${vis}`}
           style={{ animationDelay: "0.1s" }}
         >
-          Real Reviews From Real Neighbors
+          Real Reviews From Real NYC Customers
         </h2>
       </div>
 

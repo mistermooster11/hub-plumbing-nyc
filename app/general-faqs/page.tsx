@@ -15,11 +15,11 @@ const faqItems: FaqItem[] = [
     title: "How quickly can you get here?",
     content: (
       <p>
-        Most calls are scheduled the same day, and we offer near-instant
-        response for urgent clogs. Timing depends on your exact neighborhood,
-        but we move fast. Call us at{" "}
-        <a href="tel:7187491830" className="ia-link">(718) 749-1830</a>{" "}
-        and we&apos;ll give you an accurate ETA on the spot.
+        We offer same-day scheduling and available emergency service throughout
+        Manhattan, Brooklyn, and Queens. When you call{" "}
+        <a href="tel:9176348888" className="ia-link">(917) 634-8888</a>,
+        you speak with a real, in-house operator who understands your needs
+        and will give you an accurate ETA on the spot.
       </p>
     ),
   },
@@ -27,43 +27,43 @@ const faqItems: FaqItem[] = [
     title: "Do you give upfront pricing?",
     content: (
       <p>
-        Always. We diagnose the issue, explain the solution, and give you the
-        price before any work starts. No surprises, no upsell games. What we
-        quote is what you pay — period.
+        Always. Our technicians diagnose the issue, explain the solution in
+        plain language, and give you the price before any work begins. No
+        surprise invoices, no upsell pressure. What we quote is what you pay.
       </p>
     ),
   },
   {
-    title: "What tools do you use to clear drains?",
+    title: "Are you licensed and insured?",
     content: (
       <p>
-        We carry professional cutters, snakes, augers, and hydro-jetting
-        equipment on every truck. Your tech will choose the safest and most
-        effective method for your specific line and problem — and explain why
-        before starting.
+        Yes. Hub Plumbing &amp; Mechanical holds a New York City Master Plumber
+        License (Lic. #2305) and is a New York State Certified Backflow
+        Prevention Specialist (Cert. #10068). All of our work is fully insured
+        and guaranteed.
       </p>
     ),
   },
   {
-    title: "When should I consider hydro jetting instead of snaking?",
+    title: "Can you help with NYC plumbing code violations?",
     content: (
       <p>
-        Snaking clears a path through the clog. Jetting actually scrubs grease,
-        scale, and buildup off the pipe walls — giving you a cleaner line and
-        much longer-lasting results. If you get repeat clogs in the same drain,
-        jetting is usually the right call. We&apos;ll tell you honestly which
-        one makes sense for your situation.
+        Absolutely. We handle the full process — assessment, correction, permit
+        filing, inspections, and signoffs with the relevant NYC agencies. Both
+        residential and commercial violations are within our wheelhouse. Call
+        us as soon as you receive a violation notice to avoid fines and delays.
       </p>
     ),
   },
   {
-    title: "Do you service apartments and multi-unit buildings?",
+    title: "Do you service commercial buildings and multi-unit properties?",
     content: (
       <p>
-        All the time. We work with brownstones, pre-war buildings, walk-ups,
-        condos, co-ops, and multi-family homes across Brooklyn, Queens, and
-        Nassau County every day. We coordinate with building managers and work
-        to minimize disruption to other tenants.
+        Yes — we work with commercial buildings, multi-family homes, co-ops,
+        condos, restaurants, retail spaces, and office buildings throughout
+        Manhattan, Brooklyn, and Queens every day. We coordinate with building
+        managers, work efficiently to minimize disruption, and document all
+        completed work.
       </p>
     ),
   },
@@ -71,35 +71,45 @@ const faqItems: FaqItem[] = [
     title: "What areas do you serve?",
     content: (
       <>
-        <p>We serve all of Brooklyn, Queens, and Nassau County including:</p>
+        <p>We serve Manhattan, Brooklyn, Queens, The Bronx, and Staten Island including:</p>
         <p>
-          <strong>Brooklyn:</strong> Williamsburg, Greenpoint, Bushwick,
-          Bed-Stuy, Crown Heights, Park Slope, Sunset Park, Bay Ridge,
-          Bensonhurst, Dyker Heights, Gravesend, Sheepshead Bay, Coney Island
-          and more.
+          <strong>Manhattan:</strong> West Village, Chelsea, SoHo, TriBeCa,
+          Upper East Side, Upper West Side, Harlem, Hell&apos;s Kitchen,
+          Greenwich Village, and all Manhattan neighborhoods.
         </p>
         <p>
-          <strong>Queens:</strong> Astoria, LIC, Maspeth, Flushing, Whitestone,
-          Bayside, Forest Hills, Rego Park, Jackson Heights, Elmhurst, Middle
-          Village and more.
+          <strong>Brooklyn:</strong> Park Slope, Williamsburg, Bay Ridge,
+          Brooklyn Heights, Crown Heights, Sunset Park, Dyker Heights, and more.
         </p>
         <p>
-          <strong>Nassau County:</strong> Valley Stream, Elmont, Franklin
-          Square, West Hempstead, Hempstead, Garden City, Mineola, New Hyde
-          Park, Rockville Centre, Oceanside, Freeport, Merrick, Bellmore,
-          Levittown, East Meadow and more.
+          <strong>Queens:</strong> Astoria, Long Island City, Flushing, Bayside,
+          Forest Hills, Rego Park, Jackson Heights, and more.
         </p>
       </>
     ),
   },
   {
-    title: "Do you clean up after the job?",
+    title: "What is Red Carpet Service?",
     content: (
       <p>
-        Yes — always. Every tech wears shoe covers, lays down drop cloths, and
-        cleans the workspace before leaving. We test the flow, show you the
-        results, and make sure your home is cleaner than we found it. That
-        &apos;s not a bonus — it&apos;s standard.
+        Red Carpet Service is the Hub Plumbing &amp; Mechanical standard —
+        crisp, clean uniforms; visible ID badges; shoe covers before entering
+        your home; full cleanup before leaving. Our technicians treat every
+        home as if it were their own. This approach was featured in the book
+        <em> The Celebrity Experience</em> as a model for creating lifelong
+        customer loyalty.
+      </p>
+    ),
+  },
+  {
+    title: "Do you handle water heater repair and installation?",
+    content: (
+      <p>
+        Yes — all types: tank, electric, power vent, and tankless water heaters,
+        for both residential and commercial properties. Many water heaters can
+        be repaired instead of replaced if you catch the issue in time. Our
+        factory-trained technicians are certified to service all major brands
+        and handle all required permits and inspections.
       </p>
     ),
   },
@@ -197,7 +207,7 @@ export default function GeneralFaqsPage() {
             <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
               <div className="content-entry">
                 <p>
-                  Call us at <strong>(718) 749-1830</strong> — our team picks up fast
+                  Call us at <strong>(917) 634-8888</strong> — our team picks up fast
                   and can answer any question, schedule a same-day visit, or give you
                   an honest assessment over the phone.
                 </p>
@@ -205,8 +215,8 @@ export default function GeneralFaqsPage() {
               <div className="front-donation__btn-wrap">
                 <div className="front-donation__btn">
                   <SecondaryButton
-                    label="Call (718) 749-1830"
-                    href="tel:7187491830"
+                    label="Call (917) 634-8888"
+                    href="tel:9176348888"
                   />
                 </div>
               </div>

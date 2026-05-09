@@ -2,9 +2,9 @@ import CraftCatalogHero from "@/components/custom/craft-catalog/CraftCatalogHero
 import CraftCatalogClient from "@/components/custom/craft-catalog/CraftCatalogClient";
 
 export const metadata = {
-  title: "Our Services – Pipe Monkeys",
+  title: "Our Services – Hub Plumbing & Mechanical",
   description:
-    "Pipe Monkeys offers drain clearing and plumbing services across Brooklyn, Queens, and Nassau County. From kitchen sinks to main sewer lines — same-day service, upfront pricing.",
+    "Hub Plumbing & Mechanical offers licensed plumbing and heating services across Manhattan, Brooklyn, and Queens. Water heaters, boilers, leak detection, remodeling — same-day service, upfront pricing.",
 };
 
 export default function CraftCatalogPage() {

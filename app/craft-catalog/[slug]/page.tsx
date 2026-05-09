@@ -22,8 +22,8 @@ export async function generateMetadata({
   const data = servicePages[slug];
   if (!data) return {};
   return {
-    title: `${data.title} — Pipe Monkeys`,
-    description: `Professional ${data.title.toLowerCase()} service in Brooklyn, Queens, and Nassau County. Upfront pricing, same-day scheduling, guaranteed results.`,
+    title: `${data.title} — Hub Plumbing & Mechanical`,
+    description: `Professional ${data.title.toLowerCase()} service in Manhattan, Brooklyn, and Queens. Licensed NYC plumbers. Upfront pricing, same-day scheduling, guaranteed results.`,
   };
 }
 
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({
                   <p>
                     <strong>Ready to book?</strong>{" "}
                     Call{" "}
-                    <a href="tel:7187491830">(718) 749-1830</a>{" "}
+                    <a href="tel:9176348888">(917) 634-8888</a>{" "}
                     for same-day scheduling, or{" "}
                     <a href="/contact-us">send us a message online</a>.
                     We give you a price before we start — no surprises.
@@ -100,9 +100,9 @@ export default async function ServiceDetailPage({
             <RelatedCrafts
               description={
                 <p>
-                  Pipe Monkeys handles every type of drain and sewer problem
-                  across Brooklyn, Queens, and Nassau County. Explore our other
-                  services below.
+                  Hub Plumbing &amp; Mechanical handles every type of plumbing and
+                  heating job across Manhattan, Brooklyn, and Queens. Explore our
+                  other services below.
                 </p>
               }
               crafts={data.relatedServices}

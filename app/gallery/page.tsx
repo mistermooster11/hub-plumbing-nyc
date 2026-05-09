@@ -8,43 +8,63 @@ import { useInView } from "framer-motion";
 const galleryItems = [
   {
     id: "gallery-1",
-    label: "Main Sewer Line — Crown Heights, Brooklyn",
-    beforeAlt: "Blocked main sewer line before clearing",
-    afterAlt:  "Clear main sewer line after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Water Heater Installation — Upper West Side, Manhattan",
+    beforeAlt: "Old failing tank water heater before replacement",
+    afterAlt:  "New tankless water heater installed and running",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
     before: "/images/IMG_9688-1024x682.jpg",
     after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Main Sewer Line",
+    category: "Water Heaters",
   },
   {
     id: "gallery-2",
-    label: "Kitchen Drain — Astoria, Queens",
-    beforeAlt: "Grease-clogged kitchen drain before clearing",
-    afterAlt:  "Kitchen drain fully cleared and flowing",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/iStock-530983109-1.jpg",
+    label: "Bathroom Plumbing Remodel — Park Slope, Brooklyn",
+    beforeAlt: "Old bathroom plumbing before remodel",
+    afterAlt:  "New bathroom plumbing fully installed and code-compliant",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9750-1024x683.jpg",
     after:  "/images/IMG_9688-1024x682.jpg",
-    category: "Kitchen Sink",
+    category: "Plumbing Remodeling",
   },
   {
     id: "gallery-3",
-    label: "Hydro Jetting — Nassau County Home",
-    beforeAlt: "Pipe interior with grease buildup",
-    afterAlt:  "Clean pipe interior after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/iStock-530983109-1.jpg",
-    category: "Hydro Jetting",
+    label: "Leak Detection & Repair — Astoria, Queens",
+    beforeAlt: "Hidden pipe leak behind wall before repair",
+    afterAlt:  "Pipe repaired and wall restored with no trace",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
+    category: "Leak Detection",
   },
   {
     id: "gallery-4",
-    label: "Tub Drain — Bay Ridge, Brooklyn",
-    beforeAlt: "Hair-clogged tub drain before clearing",
-    afterAlt:  "Tub drain cleared with no damage to tile",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
+    label: "Boiler Service & Repair — Brooklyn Heights, Brooklyn",
+    beforeAlt: "Boiler with violation and component failures before service",
+    afterAlt:  "Boiler fully serviced, violation cleared, and inspected",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
     before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Tub & Shower",
+    after:  "/images/iStock-530983109-1.jpg",
+    category: "Heating & Boilers",
+  },
+  {
+    id: "gallery-5",
+    label: "Faucet & Fixture Upgrade — Chelsea, Manhattan",
+    beforeAlt: "Old leaking faucet and dated fixtures before replacement",
+    afterAlt:  "New fixtures installed clean and tight",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/iStock-530983109-1.jpg",
+    category: "Faucets & Fixtures",
+  },
+  {
+    id: "gallery-6",
+    label: "Kitchen Plumbing — Forest Hills, Queens",
+    beforeAlt: "Outdated kitchen sink plumbing and garbage disposal",
+    afterAlt:  "New kitchen sink plumbing installed with new disposal",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
+    category: "Faucets & Fixtures",
   },
 ];
 
@@ -84,7 +104,7 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
         {item.category}
       </span>
 
-      {/* Before / After image pair — large, equal height */}
+      {/* Before / After image pair */}
       <div
         style={{
           display: "grid",
@@ -98,7 +118,6 @@ function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay
             style={{
               background: `url(${item.before}) no-repeat 50% 50% / cover`,
               backgroundColor: "#1a2a3a",
-              /* tall on desktop, still readable on mobile */
               aspectRatio: "4 / 3",
               borderRadius: "4px",
               width: "100%",
@@ -165,9 +184,9 @@ export default function GalleryPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Real Results</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Every job below was done by a Pipe Monkeys tech in Brooklyn, Queens, or Nassau
-                  County. These are real lines, real homes, and real results — no stock photos.
-                  {/* [TODO: Replace placeholder images with actual job photos from client] */}
+                  Every job below was completed by a licensed Hub Plumbing &amp; Mechanical
+                  technician in Manhattan, Brooklyn, or Queens. Real work, real homes — no stock photos.
+                  {/* [TODO: Replace placeholder images with actual job photos from Hub Plumbing] */}
                 </p>
               </div>
             </div>
@@ -178,9 +197,9 @@ export default function GalleryPage() {
               </div>
               <ul className="quick-links" role="list">
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:9176348888">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (917) 634-8888</span>
                   </a>
                 </li>
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.2s" }}>
@@ -218,8 +237,8 @@ export default function GalleryPage() {
             style={{ animationDelay: "0.2s" }}
           >
             <p>
-              Scroll through clogs we&apos;ve cleared across the area. From grease-packed kitchen
-              lines to root-choked main sewers — we document our work and stand behind every job.
+              A sample of recent plumbing and heating work across Manhattan, Brooklyn, and Queens.
+              Hub Plumbing documents every job — so you can see exactly what you&apos;re getting.
             </p>
           </div>
           <div
@@ -249,7 +268,7 @@ export default function GalleryPage() {
       >
         <div className="inner inner--slim-1172">
           <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Ready to Clear Your Drain?
+            Ready to Book?
           </div>
           <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             Same-Day Service Available
@@ -257,14 +276,14 @@ export default function GalleryPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Call <strong>(718) 749-1830</strong> — we&apos;ll give you an honest price
-                before we start, and we won&apos;t leave until the job is done right.
+                Call <strong>(917) 634-8888</strong> — we&apos;ll give you an honest upfront price
+                before any work starts, and we won&apos;t leave until the job is done right.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:9176348888">
+                  Call (917) 634-8888
                 </a>
               </div>
             </div>

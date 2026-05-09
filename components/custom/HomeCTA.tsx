@@ -16,23 +16,24 @@ export default function HomeCTA() {
     >
       <div className="inner inner--slim-1172">
         <div className={`sub-heading wow fadeInUpS${vis}`} style={{ animationDelay: "0.1s" }}>
-          Same-Day Service Available
+          Same-Day &amp; Emergency Service Available
         </div>
         <h2 className={`h2 wow fadeInUpS${vis}`} style={{ animationDelay: "0.15s" }}>
-          Don&apos;t Wait — Call Now
+          Plumbing Problem? Call Now.
         </h2>
         <div className={`front-donation__in wow fadeInUpS${vis}`} style={{ animationDelay: "0.2s" }}>
           <div className="content-entry">
             <p>
-              Backed up drains don&apos;t fix themselves. Our Brooklyn, Queens &amp; Nassau County
-              techs are on the road every day — call us and we&apos;ll get someone out fast.
+              Plumbing emergencies don&apos;t wait. Hub Plumbing &amp; Mechanical serves
+              Manhattan, Brooklyn &amp; Queens with available same-day and emergency
+              repairs. You&apos;ll speak with a real, in-house operator — not a call center.
             </p>
           </div>
           <div className="front-donation__btn-wrap">
             <div className="front-donation__btn">
               <SecondaryButton
-                label="Call (718) 749-1830"
-                href="tel:7187491830"
+                label="Call (917) 634-8888"
+                href="tel:9176348888"
               />
             </div>
           </div>

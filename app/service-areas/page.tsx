@@ -7,46 +7,46 @@ import { useInView } from "framer-motion";
 
 const areas = [
   {
-    slug: "brooklyn",
-    region: "Brooklyn",
-    headline: "Drain & Sewer Specialists in Brooklyn",
+    slug: "manhattan",
+    region: "Manhattan",
+    headline: "Plumbing & Heating Services in Manhattan",
     description:
-      "Brooklyn has some of the oldest plumbing infrastructure in New York — pre-war pipe systems, clay drain lines in brownstones, and cast iron stacks in walk-ups that have been running for 80+ years. Our techs know exactly what to expect when they pull up to a building in Park Slope vs. Bay Ridge, and they arrive with the right equipment the first time.",
+      "Manhattan is home to some of the most complex plumbing systems in the city — pre-war high-rises, historic brownstones in the West Village and Upper West Side, co-ops with shared building systems, and newer construction in Midtown and Downtown. Hub Plumbing & Mechanical has been serving Manhattan since 1999, and our licensed technicians know Manhattan buildings inside and out.",
     callouts: [
-      "Brownstone & pre-war walk-up specialists",
-      "Stack drain issues in multi-family buildings",
-      "Same-day service, all neighborhoods",
+      "Pre-war and historic building specialists",
+      "Co-op & condo-approved licensed plumbers",
+      "Same-day and emergency service throughout all of Manhattan",
     ],
     neighborhoods:
-      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • Canarsie • East New York & More",
+      "West Village • Chelsea • SoHo • TriBeCa • Greenwich Village • East Village • NoHo • NoLita • Lower East Side • Kips Bay • Murray Hill • Midtown • Hell's Kitchen • Upper East Side • Upper West Side • Harlem • Washington Heights • Inwood • Carnegie Hill • Lenox Hill • Lincoln Square & More",
+  },
+  {
+    slug: "brooklyn",
+    region: "Brooklyn",
+    headline: "Plumbing & Heating Services in Brooklyn",
+    description:
+      "Brooklyn's housing stock runs the full spectrum — pre-war brownstones in Park Slope and Crown Heights, mid-century apartment buildings in Bay Ridge and Flatbush, and newer construction throughout Williamsburg and Greenpoint. Hub Plumbing & Mechanical handles every type of Brooklyn plumbing challenge with licensed, experienced technicians and upfront pricing.",
+    callouts: [
+      "Brownstone & pre-war walk-up specialists",
+      "Water heater and boiler services for multi-family buildings",
+      "Same-day service across all Brooklyn neighborhoods",
+    ],
+    neighborhoods:
+      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • Canarsie • East New York • Brooklyn Heights • Cobble Hill • Carroll Gardens & More",
   },
   {
     slug: "queens",
     region: "Queens",
-    headline: "Drain & Sewer Specialists in Queens",
+    headline: "Plumbing & Heating Services in Queens",
     description:
-      "Queens covers one of the widest mixes of home types in the entire city — from single-family houses in Whitestone and Bayside to dense apartment buildings in Astoria and Flushing. Our team handles everything from slow kitchen drains in a LIC condo to main line backups in a multi-unit Jackson Heights walk-up.",
+      "Queens is one of the most diverse boroughs in the city — from single-family homes in Whitestone and Bayside to dense apartment buildings in Astoria and Flushing, and everything in between. Our Hub Plumbing team handles residential and commercial plumbing in Queens with the same Red Carpet standard we bring to every borough.",
     callouts: [
-      "Single-family homes to large apartment buildings",
-      "Grease line clearing for restaurants & commercial kitchens",
-      "Emergency same-day response across all of Queens",
+      "Residential plumbing for single-family and multi-unit homes",
+      "Commercial plumbing for restaurants and retail in Queens",
+      "Emergency service available throughout all of Queens",
     ],
     neighborhoods:
-      "Astoria • LIC • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • Ridgewood • Woodside • Sunnyside • Jamaica • Howard Beach & More",
-  },
-  {
-    slug: "nassau-county",
-    region: "Nassau County",
-    headline: "Drain & Sewer Specialists in Nassau County",
-    description:
-      "Nassau County homes sit on longer sewer runs than most NYC properties, and mature tree root systems along those lines are one of the leading causes of main line backups. Our technicians understand how Nassau systems are laid out, where clogs typically form, and how to clear them without damaging the pipe.",
-    callouts: [
-      "Root intrusion specialists for Nassau main lines",
-      "Hydro jetting for long sewer runs",
-      "Local techs — not dispatched from far away",
-    ],
-    neighborhoods:
-      "Valley Stream • Elmont • Franklin Square • West Hempstead • Hempstead • Garden City • Mineola • New Hyde Park • Floral Park • Rockville Centre • Oceanside • Baldwin • Freeport • Merrick • Bellmore • Wantagh • Seaford • Massapequa • Levittown • East Meadow • Uniondale • Lynbrook • Malverne • Hewlett & More",
+      "Astoria • Long Island City • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • Ridgewood • Woodside • Sunnyside • Jamaica • Howard Beach • Fresh Meadows • Kew Gardens • Corona & More",
   },
 ];
 
@@ -83,7 +83,7 @@ function AreaSection({ area, reversed }: { area: typeof areas[number]; reversed:
             </p>
             <p>
               Not sure if we cover your street?{" "}
-              <a href="tel:7187491830" className="ia-link">Call (718) 749-1830</a>{" "}
+              <a href="tel:9176348888" className="ia-link">Call (917) 634-8888</a>{" "}
               — we almost certainly do.
             </p>
           </div>
@@ -127,8 +127,8 @@ export default function ServiceAreasPage() {
               <div className={`sub-heading fadeInUpS wow${heroVis}`}>Coverage Area</div>
               <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
                 <p>
-                  Pipe Monkeys serves all of Brooklyn, Queens, and Nassau County. We don&apos;t
-                  subcontract — our own techs cover every neighborhood, every day, seven days a week.
+                  Hub Plumbing &amp; Mechanical serves all of Manhattan, Brooklyn, and Queens. We don&apos;t
+                  subcontract — our own licensed techs cover every neighborhood, every day, seven days a week.
                   Same-day scheduling is available across our entire service area.
                 </p>
               </div>
@@ -148,9 +148,9 @@ export default function ServiceAreasPage() {
                   </li>
                 ))}
                 <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.4s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
+                  <a className="ia-link ia-link--arrow" href="tel:9176348888">
                     <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
+                    <span>Call (917) 634-8888</span>
                   </a>
                 </li>
               </ul>
@@ -179,14 +179,14 @@ export default function ServiceAreasPage() {
           <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
             <div className="content-entry">
               <p>
-                Our dispatch is fast and our coverage is wide. Call <strong>(718) 749-1830</strong> and
+                Our dispatch is fast and our coverage is wide. Call <strong>(917) 634-8888</strong> and
                 we&apos;ll confirm in 30 seconds and get you on the schedule the same day.
               </p>
             </div>
             <div className="front-donation__btn-wrap">
               <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
+                <a className="btn btn--primary" href="tel:9176348888">
+                  Call (917) 634-8888
                 </a>
               </div>
             </div>

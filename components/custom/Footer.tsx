@@ -12,8 +12,21 @@ const quickLinks = [
 ];
 
 const socials = [
-  { icon: "icon-facebook",   href: "https://www.facebook.com/pipemonkeys",  label: "Facebook"  },
-  { icon: "icon-instagram",  href: "https://www.instagram.com/pipemonkeys", label: "Instagram" },
+  {
+    icon: "icon-facebook",
+    href: "https://www.facebook.com/pages/Hub-Plumbing-NYC/208105895896448",
+    label: "Facebook",
+  },
+  {
+    icon: "icon-twitter",
+    href: "https://twitter.com/hub_plumbing",
+    label: "Twitter / X",
+  },
+  {
+    icon: "icon-youtube",
+    href: "https://www.youtube.com/user/hubplumbingtest",
+    label: "YouTube",
+  },
 ];
 
 export default function Footer() {
@@ -30,11 +43,11 @@ export default function Footer() {
         {/* Logo */}
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
-            <span className="sr-only">Pipe Monkeys</span>
-            {/* [TODO: Replace with Pipe Monkeys logo] */}
+            <span className="sr-only">Hub Plumbing &amp; Mechanical</span>
+            {/* [TODO: Replace with Hub Plumbing logo] */}
             <img
               src="/logos/logo-long.svg"
-              alt="Pipe Monkeys Drain & Sewer"
+              alt="Hub Plumbing & Mechanical"
               width="220"
               height="48"
             />
@@ -66,14 +79,14 @@ export default function Footer() {
             <h3 className="footer__heading">Contact Us</h3>
             <div className="content-entry">
               <p>
-                <strong>(718) 749-1830</strong><br />
-                Brooklyn, Queens &amp; Nassau County<br />
-                {/* [TODO: Add business hours] */}
-                Mon–Sat: 7am–8pm &bull; Sun: Emergency Only
+                <strong>(917) 634-8888</strong><br />
+                103 Charles Street, New York, NY 10014<br />
+                Manhattan &bull; Brooklyn &bull; Queens<br />
+                Same-Day &amp; Emergency Service Available
               </p>
             </div>
             <a
-              href="tel:7187491830"
+              href="tel:9176348888"
               className={`ia-link ia-link--arrow ia-link--white wow${vis}`}
             >
               <i className="icon-arrow-right ia-orange" />
@@ -89,9 +102,9 @@ export default function Footer() {
             <h3 className="footer__heading">Service Areas</h3>
             <div className="content-entry">
               <p>
-                Brooklyn &bull; Queens &bull; Nassau County<br />
-                All neighborhoods — if you&apos;re not sure,
-                just call. We almost certainly cover your area.
+                Manhattan &bull; Brooklyn &bull; Queens<br />
+                The Bronx &bull; Staten Island<br />
+                If you&apos;re in NYC, we cover your area.
               </p>
             </div>
             <a
@@ -111,7 +124,7 @@ export default function Footer() {
         <div className={`footer__bottom cleared fadeInUpS wow${vis}`}>
 
           <div className="footer__bottom__left">
-            &copy;2026 Pipe Monkeys. All rights reserved.
+            &copy;2026 Hub Plumbing &amp; Mechanical. All rights reserved.
           </div>
 
           <div className="footer__bottom__center">

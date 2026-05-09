@@ -28,7 +28,7 @@ export default function Announcements() {
 
         <div className="front-announcements__inner">
           <div className="sub-heading">How It Works</div>
-          <h3 className="h3">Fast, Clean, and Priced Up Front</h3>
+          <h3 className="h3">Red Carpet Service, Every Time</h3>
         </div>
 
         <div className="relative z-20 front-announcements__content">
@@ -39,7 +39,7 @@ export default function Announcements() {
               <span
                 style={{
                   backgroundImage:
-                    'url(/images/IMG_9688-1024x682.jpg)',
+                    'url(https://hubplumbingnyc.com/images/residential-plumbing.jpg)',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '50% 50%',
                   backgroundSize: 'cover',
@@ -49,7 +49,7 @@ export default function Announcements() {
                   backgroundColor: '#101d2b',
                 }}
               />
-              {/* [TODO: Replace with Pipe Monkeys team or job site photo] */}
+              {/* [TODO: Replace with Hub Plumbing team or job site photo] */}
             </div>
           </div>
 
@@ -57,23 +57,25 @@ export default function Announcements() {
           <div className="front-announcements__text">
             <div className="content-entry">
               <p>
-                Every call starts the same way: we show up, diagnose the problem in front
-                of you, explain exactly what needs to happen, and give you the price before
-                a single tool touches your drain. No guessing, no surprise invoices — just
-                a straight answer and a plan.
+                Imagine your plumbers rolling out a red carpet — covering their work
+                boots with booties, wearing ID badges, arriving in clean uniforms, and
+                leaving your home spotless when they leave. That&apos;s Hub Plumbing
+                &amp; Mechanical. Every call. Every tech.
               </p>
               <p>
-                <strong>Step 1: Diagnose.</strong> Our tech assesses the blockage and
-                identifies the right tool for the job — snake, auger, or hydro jet.
+                <strong>Step 1: Call &amp; Connect.</strong> You speak with a real,
+                seasoned in-house operator — not a call center. We understand your
+                needs and schedule service at your convenience.
               </p>
               <p>
-                <strong>Step 2: Approve &amp; Clear.</strong> You get the price first.
-                Once you&apos;re ready, we go to work. Most jobs are done in under an hour.
+                <strong>Step 2: Diagnose &amp; Quote.</strong> Our licensed technician
+                arrives on time, assesses the issue, and gives you the price before
+                any work begins. No surprises, no upsells.
               </p>
               <p>
-                <strong>Step 3: Confirm &amp; Clean Up.</strong> We test the flow in front
-                of you, clean the work area, and don&apos;t leave until the drain is
-                fully clear.
+                <strong>Step 3: Fix &amp; Clean Up.</strong> We complete the work,
+                test it in front of you, clean the workspace thoroughly, and
+                don&apos;t leave until the job is done right.
               </p>
             </div>
 
