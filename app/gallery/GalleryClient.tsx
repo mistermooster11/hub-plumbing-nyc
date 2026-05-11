@@ -1,0 +1,296 @@
+"use client";
+
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+
+/* ── Gallery Data ────────────────────────────────────────────── */
+
+const galleryItems = [
+  {
+    id: "gallery-1",
+    label: "Water Heater Installation — Upper West Side, Manhattan",
+    beforeAlt: "Old failing tank water heater before replacement",
+    afterAlt:  "New tankless water heater installed and running",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9688-1024x682.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
+    category: "Water Heaters",
+  },
+  {
+    id: "gallery-2",
+    label: "Bathroom Plumbing Remodel — Park Slope, Brooklyn",
+    beforeAlt: "Old bathroom plumbing before remodel",
+    afterAlt:  "New bathroom plumbing fully installed and code-compliant",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
+    category: "Plumbing Remodeling",
+  },
+  {
+    id: "gallery-3",
+    label: "Leak Detection & Repair — Astoria, Queens",
+    beforeAlt: "Hidden pipe leak behind wall before repair",
+    afterAlt:  "Pipe repaired and wall restored with no trace",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9750-1024x683.jpg",
+    category: "Leak Detection",
+  },
+  {
+    id: "gallery-4",
+    label: "Boiler Service & Repair — Brooklyn Heights, Brooklyn",
+    beforeAlt: "Boiler with violation and component failures before service",
+    afterAlt:  "Boiler fully serviced, violation cleared, and inspected",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9688-1024x682.jpg",
+    after:  "/images/iStock-530983109-1.jpg",
+    category: "Heating & Boilers",
+  },
+  {
+    id: "gallery-5",
+    label: "Faucet & Fixture Upgrade — Chelsea, Manhattan",
+    beforeAlt: "Old leaking faucet and dated fixtures before replacement",
+    afterAlt:  "New fixtures installed clean and tight",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/IMG_9750-1024x683.jpg",
+    after:  "/images/iStock-530983109-1.jpg",
+    category: "Faucets & Fixtures",
+  },
+  {
+    id: "gallery-6",
+    label: "Kitchen Plumbing — Forest Hills, Queens",
+    beforeAlt: "Outdated kitchen sink plumbing and garbage disposal",
+    afterAlt:  "New kitchen sink plumbing installed with new disposal",
+    // [TODO: Replace with real before/after photos from Hub Plumbing]
+    before: "/images/iStock-530983109-1.jpg",
+    after:  "/images/IMG_9688-1024x682.jpg",
+    category: "Faucets & Fixtures",
+  },
+];
+
+/* ── Sub-components ─────────────────────────────────────────── */
+
+function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
+  const vis = inView ? " is-visible" : "";
+
+  return (
+    <div
+      ref={ref}
+      className={`fadeInUpS wow${vis}`}
+      style={{
+        animationDelay: delay,
+        background: "#fff",
+        border: "1px solid #e8e8e8",
+        borderRadius: "6px",
+        overflow: "hidden",
+        padding: "2rem",
+      }}
+    >
+      {/* Category badge */}
+      <span
+        style={{
+          display: "inline-block",
+          marginBottom: "1.5rem",
+          padding: "0.4rem 1.2rem",
+          background: "var(--ia-sky, #a1c5d3)",
+          borderRadius: "4px",
+          fontSize: "1.2rem",
+          fontWeight: 600,
+          color: "#1a2a3a",
+        }}
+      >
+        {item.category}
+      </span>
+
+      {/* Before / After image pair */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "1.2rem",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              background: `url(${item.before}) no-repeat 50% 50% / cover`,
+              backgroundColor: "#1a2a3a",
+              aspectRatio: "4 / 3",
+              borderRadius: "4px",
+              width: "100%",
+            }}
+            role="img"
+            aria-label={item.beforeAlt}
+          />
+          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>Before</p>
+        </div>
+        <div>
+          <div
+            style={{
+              background: `url(${item.after}) no-repeat 50% 50% / cover`,
+              backgroundColor: "#1a2a3a",
+              aspectRatio: "4 / 3",
+              borderRadius: "4px",
+              width: "100%",
+            }}
+            role="img"
+            aria-label={item.afterAlt}
+          />
+          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>After</p>
+        </div>
+      </div>
+
+      <h3 className="h5 ia-margin-0" style={{ fontSize: "1.8rem" }}>{item.label}</h3>
+    </div>
+  );
+}
+
+/* ── Page ───────────────────────────────────────────────────── */
+
+export default function GalleryPage() {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const heroInView = useInView(heroRef, { once: true, margin: "0px 0px -60px 0px" });
+  const gridRef = useRef<HTMLDivElement>(null);
+  const gridInView = useInView(gridRef, { once: true, margin: "0px 0px -60px 0px" });
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const ctaInView = useInView(ctaRef, { once: true, margin: "0px 0px -60px 0px" });
+
+  const heroVis = heroInView ? " is-visible" : "";
+
+  return (
+    <main className="pt-76 max-[1150px]:pt-[6.2rem]">
+
+      {/* ── Hero ── */}
+      <div ref={heroRef} className={`hero-org flex-module fadeIn wow${heroVis}`}>
+        <div className="hero-org__top ia-bg-dark">
+          <div className="inner inner--slim-1172">
+            <div className={`breadcrumbs ia-sky fadeInUpS wow${heroVis}`}>
+              <span><a href="/">Home</a></span>
+              <em>&gt;</em>
+              <span className="post post-page current-item">Gallery</span>
+            </div>
+            <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
+              Before &amp; After Gallery
+            </h1>
+          </div>
+        </div>
+
+        <div className="hero-org__bottom flex-module">
+          <div className="inner inner--slim-1172 cleared">
+            <div className={`hero-org__left wow${heroVis}`}>
+              <div className={`sub-heading fadeInUpS wow${heroVis}`}>Real Results</div>
+              <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
+                <p>
+                  Every job below was completed by a licensed Hub Plumbing &amp; Mechanical
+                  technician in Manhattan, Brooklyn, or Queens. Real work, real homes — no stock photos.
+                  {/* [TODO: Replace placeholder images with actual job photos from Hub Plumbing] */}
+                </p>
+              </div>
+            </div>
+
+            <div className="hero-org__right">
+              <div className={`sub-heading fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
+                Quick Links
+              </div>
+              <ul className="quick-links" role="list">
+                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
+                  <a className="ia-link ia-link--arrow" href="tel:9176348888">
+                    <i className="icon-link" />
+                    <span>Call (917) 634-8888</span>
+                  </a>
+                </li>
+                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.2s" }}>
+                  <a className="ia-link ia-link--arrow" href="/craft-catalog">
+                    <i className="icon-link" />
+                    <span>Our Services</span>
+                  </a>
+                </li>
+                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.3s" }}>
+                  <a className="ia-link ia-link--arrow" href="/contact-us">
+                    <i className="icon-link" />
+                    <span>Schedule Service</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Gallery Grid ── */}
+      <div
+        ref={gridRef}
+        className={`user-grid-small fadeIn wow${gridInView ? " is-visible" : ""} flex-module`}
+      >
+        <div className="inner inner--slim-1172">
+          <h2
+            className={`h3 fadeInUpS wow${gridInView ? " is-visible" : ""}`}
+            style={{ animationDelay: "0.1s" }}
+          >
+            Recent Jobs
+          </h2>
+          <div
+            className={`content-entry fadeInUpS wow${gridInView ? " is-visible" : ""}`}
+            style={{ animationDelay: "0.2s" }}
+          >
+            <p>
+              A sample of recent plumbing and heating work across Manhattan, Brooklyn, and Queens.
+              Hub Plumbing documents every job — so you can see exactly what you&apos;re getting.
+            </p>
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "3rem",
+            }}
+            className="gallery-grid"
+          >
+            {galleryItems.map((item, i) => (
+              <GalleryCard key={item.id} item={item} delay={`${(i % 2) * 0.1}s`} />
+            ))}
+          </div>
+          <style>{`
+            @media (max-width: 640px) {
+              .gallery-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
+        </div>
+      </div>
+
+      {/* ── CTA ── */}
+      <div
+        ref={ctaRef}
+        className={`front-donation ia-bg-sky flex-module wow fadeInUpS${ctaInView ? " is-visible" : ""}`}
+      >
+        <div className="inner inner--slim-1172">
+          <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
+            Ready to Book?
+          </div>
+          <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+            Same-Day Service Available
+          </h2>
+          <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
+            <div className="content-entry">
+              <p>
+                Call <strong>(917) 634-8888</strong> — we&apos;ll give you an honest upfront price
+                before any work starts, and we won&apos;t leave until the job is done right.
+              </p>
+            </div>
+            <div className="front-donation__btn-wrap">
+              <div className="front-donation__btn">
+                <a className="btn btn--primary" href="tel:9176348888">
+                  Call (917) 634-8888
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  );
+}
