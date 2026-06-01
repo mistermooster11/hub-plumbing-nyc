@@ -174,18 +174,18 @@
 /* ─── CONTACT SECTION ───────────────────────────── */
 .contact-section {
   position: relative;
-  background-image: url("/images/title-bg.jpg");
-  background-size: cover;
+  background-color: #ffffff;
+  background-image: url("/wp-assets/map-1.png");
+  background-size: auto;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-/* Dark overlay — same as cta-form */
+/* No dark overlay — white bg with map */
 .contact-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   z-index: 0;
 }
 
@@ -272,14 +272,14 @@
 .contact-social-icon {
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
-  transition: background-color 0.2s, border-color 0.2s;
+  color: var(--color-dark);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .contact-social-icon:hover {

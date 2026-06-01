@@ -66,7 +66,7 @@ export default function Header() {
         <div className="header__logo">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logos/HUB_Plumbing_logo.png"
               alt="Hub Plumbing & Mechanical"
               width={200}
               height={44}

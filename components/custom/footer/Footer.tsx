@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer__brand">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logos/HUB_Plumbing_logo.png"
               alt="Hub Plumbing & Mechanical Logo"
               width={239}
               height={58}
