@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import BlogClient from "./BlogClient";
+import "@/styles/homepage.css";
+import "@/styles/inner-pages.css";
+import PageHeroSection from "@/components/custom/page-hero/PageHeroSection";
+import BlogSection from "@/components/custom/blog/BlogSection";
+import CTAFormSection from "@/components/custom/cta/CTAFormSection";
 
 export const metadata: Metadata = {
   title: "Plumbing Tips & Guides | Hub Plumbing & Mechanical NYC",
@@ -14,5 +18,18 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogClient />;
+  return (
+    <>
+      <PageHeroSection
+        title="Plumbing Tips & Homeowner Guides"
+        subtitle="Practical advice from licensed NYC plumbers who work in Manhattan, Brooklyn, and Queens every day. No fluff — just the honest information homeowners and building managers actually need."
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Blog" },
+        ]}
+      />
+      <BlogSection />
+      <CTAFormSection />
+    </>
+  );
 }
